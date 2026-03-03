@@ -18,36 +18,29 @@ formulario.addEventListener(
         const mensaje = document.getElementById('message');
 
         //Tecnica centinela
-        let Valid = true;
+        let valid = true;
         if(name === ''){
             errorName.textContent = 'El nombre es obligatorio';
-            Valid = true;
+            valid = false;
         }else{
             errorName.textContent = "";
         } 
         if(age === ''){
             errorAge.textContent = 'La edad es obligatoria';
-            Valid = true;
+            valid = false;
         }
         else {
             errorAge.textContent = "";
         }
         if (email === ''){
             errorEmail.textContent = 'El correo electrónico es obligatorio';
-            Valid = true;
+                valid = false;
         }else{
             errorEmail.textContent = "";
         }
         if (phone === ''){
             errorPhone.textContent = 'El telefono es obligatorio';
-            Valid = true;
-        }else{
-            errorPhone.textContent = "";
+            valid = false;
         }
         
-        if(Valid){
-            mensaje.textContent = 'Registro correcto';
-    }else{
-        mensaje.textContent = "";
-    }
-);
+});
